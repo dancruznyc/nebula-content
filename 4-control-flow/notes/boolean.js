@@ -13,3 +13,8 @@
 // null
 // undefined
 // NaN
+
+// Ternary Operator
+let age = 26;
+let beverage = age >= 21 ? "Beer" : "Juice";
+console.log(beverage); // "Beer"
