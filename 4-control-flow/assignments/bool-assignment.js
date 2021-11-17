@@ -24,7 +24,7 @@ let melonsAmount = 7;
 // If your number of watermelons is more than 10, print, 'You must be CRAZY for watermelon!'
 // If your number of watermelons is more than 15, print, 'Did you have a coupon?'
 
-if (melonsAmount === 1 || 2) {
+if (melonsAmount === 1 || melonsAmount === 2) {
   console.log("Looks like you like watermelon");
 } else if (melonsAmount > 2 && melonsAmount < 5) {
   console.log("Thats a lot of watermelon");
