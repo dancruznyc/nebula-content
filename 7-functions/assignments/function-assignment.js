@@ -1,5 +1,5 @@
 // Reverse a string
-
+// version 1
 const reverseString = function (someString) {
   const stringToArray = someString.split("");
   const reverseArray = stringToArray.reverse();
@@ -8,7 +8,7 @@ const reverseString = function (someString) {
 };
 
 console.log(reverseString("Hello"));
-
+// version 2
 function reverseStr(str) {
   let newString = "";
   for (let i = str.length - 1; i >= 0; i--) {
@@ -31,13 +31,13 @@ const repeatStr = function (num, str) {
 console.log(repeatStr(5, "Hello"));
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Find the smallest number in an array
-
+// version 1
 const smallestInt = function (numsArray) {
   return Math.min(...numsArray);
 };
 
 console.log(smallestInt([55, 101, 70, 9, 4, 6]));
-
+// version 2
 const array = [20, 300, 100, 90, 18];
 const getMinValue = function (values) {
   let minvalue = values[0];
