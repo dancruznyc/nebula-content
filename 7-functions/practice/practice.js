@@ -69,3 +69,22 @@ function points(games) {
 }
 
 console.log(points(games));
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+function DNAtoRNA(dna) {
+  // create a function which returns an RNA sequence from the given DNA sequence
+  let rna = "";
+  if (dna === "" || dna === undefined) {
+    return "";
+  } else if (dna) {
+    for (let i = 0; i < dna.length; i++) {
+      if (dna[i] === "T") {
+        rna += "U";
+      } else {
+        rna += dna[i];
+      }
+    }
+  }
+  return rna;
+}
+console.log(DNAtoRNA("GCAT"));
