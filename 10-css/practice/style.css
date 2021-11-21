@@ -1,0 +1,253 @@
+/* Style Reset */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*------------------ Navigation -------------------*/
+.navigation {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/60133069ccdf254ecbbd6f57/1611949235895-CAVM5ND53HP8NDWS1414/paper%2Bbackground%2Bhorizontal.jpg%22);
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  height: 12rem;
+}
+.navigation-btns {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-btns__nav {
+  display: flex;
+}
+
+.navigation-btns__nav a {
+  text-decoration: none;
+  margin: 0 2rem;
+  color: black;
+}
+
+.navigation-btns__logo a img {
+  height: 12rem;
+}
+.navigation-icons {
+  height: 12rem;
+  display: flex;
+  align-items: center;
+}
+.navigation-icons a {
+  margin: 0 2rem;
+  color: black;
+}
+
+/*----------------- Main Section ---------------------------*/
+.main-section {
+  background-image: url(https://images.squarespace-cdn.com/content/v1/60133069ccdf254ecbbd6f57/1611949235895-CAVM5ND53HP8NDWS1414/paper%2Bbackground%2Bhorizontal.jpg%22);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main-content-left {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content-left h1 {
+  font-size: 10rem;
+}
+.main-content-left p {
+  font-size: 2rem;
+}
+
+.main-content-left__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+}
+.main-content-left img {
+  width: 50rem;
+}
+.main-content-left__form input {
+  border: none;
+  color: darkgray;
+  font-size: 3rem;
+  background-color: transparent;
+  border-bottom: 3px solid darkgray;
+  margin: 2rem;
+}
+
+.main-content-left__form button {
+  border: none;
+  background-color: tomato;
+  padding: 1rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+.main-image-right img {
+  width: 55rem;
+}
+
+/* ---------------------------- CTA-Section ------------------------------------ */
+
+.projects-cta {
+  height: 100vh;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.projects-cta__1,
+.projects-cta__2,
+.projects-cta__3 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50rem;
+}
+
+.projects-cta h3 {
+  font-size: 3rem;
+}
+.projects-cta p {
+  font-size: 2rem;
+  width: 30rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.projects-cta button {
+  padding: 1.5rem;
+  border-radius: 50px;
+  font-size: 2rem;
+  color: tomato;
+  border: none;
+  cursor: pointer;
+}
+/* ----------------------- Contact Section--------------------------------------- */
+.contact-info {
+  height: 80vh;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/60133069ccdf254ecbbd6f57/1611949235895-CAVM5ND53HP8NDWS1414/paper%2Bbackground%2Bhorizontal.jpg%22);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+}
+.contact-info-img {
+  width: 50rem;
+}
+.contact-info-img img {
+  width: 100%;
+}
+
+.contact-info-info {
+  width: 50rem;
+}
+
+.contact-info-info img {
+  width: 50rem;
+}
+
+/* ---------------------- footer section ------------------------- */
+.footer {
+  height: 80vh;
+  background-color: #24242c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer-img {
+  width: 45rem;
+}
+
+.footer-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-form h3 {
+  font-size: 3rem;
+  color: tomato;
+}
+
+.footer-form form {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+}
+
+.footer-form form input {
+  margin: 1.5rem;
+  height: 2rem;
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border-bottom: solid white 3px;
+  padding: 5px;
+}
+
+.footer-form form input::placeholder {
+  font-size: 2rem;
+  color: white;
+}
+
+.footer-form button {
+  width: 10rem;
+  background-color: tomato;
+  border: none;
+  border-radius: 25px;
+  padding: 1rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.footer-icons a {
+  font-size: 2rem;
+  color: tomato;
+  margin-right: 1rem;
+}
+
+.footer-icons i {
+  border: 2px solid tomato;
+  border-radius: 50%;
+  padding: 0.7rem;
+}
+
+.footer-copy a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: tomato;
+}
