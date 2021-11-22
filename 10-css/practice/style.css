@@ -1,3 +1,5 @@
+/*  Site for insporation https://www.mattdavella.com/ */
+
 /* Style Reset */
 html {
   box-sizing: border-box;
@@ -87,6 +89,8 @@ html {
   background-color: transparent;
   border-bottom: 3px solid darkgray;
   margin: 2rem;
+  outline: none;
+  cursor: pointer;
 }
 
 .main-content-left__form button {
@@ -97,6 +101,7 @@ html {
   color: white;
   font-size: 2rem;
   margin-bottom: 5rem;
+  cursor: pointer;
 }
 .main-image-right img {
   width: 55rem;
