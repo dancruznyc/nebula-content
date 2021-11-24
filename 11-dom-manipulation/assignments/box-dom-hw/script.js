@@ -17,7 +17,7 @@ for (let i = 1; i <= 10; i++) {
     hex += hexValues[index];
   }
   div.className = "div-size";
-  div.innerText = `Div ${i}`;
+  div.innerText = `#${hex}`;
   div.style.backgroundColor = `#${hex}`;
   container.appendChild(div);
 }
