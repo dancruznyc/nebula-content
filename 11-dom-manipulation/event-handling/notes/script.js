@@ -1,10 +1,13 @@
-const h1 = document.querySelector("h1");
 const div = document.querySelector("div");
-
-h1.addEventListener("click", () => {
-  h1.style.backgroundColor = "red";
-});
+const body = document.body;
+let isClicked = false;
 
 div.addEventListener("click", () => {
-  div.classList.toggle("box");
+  if (!isClicked) {
+    body.style.backgroundColor = "tomato";
+    isClicked = true;
+  } else {
+    body.style.backgroundColor = "white";
+    isClicked = false;
+  }
 });
