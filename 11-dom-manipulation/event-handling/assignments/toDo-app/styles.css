@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+}
+
+.todo--container {
+  width: 50rem;
+
+  background-image: url("https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80");
+  border-radius: 20px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.todo--title {
+  font-size: 4rem;
+  font-family: "Kalam", cursive;
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.todo--form {
+  display: none;
+  max-height: 0;
+  flex-direction: column;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.show {
+  display: flex;
+}
+
+.todo--form input {
+  height: 3rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.todo--form input:focus {
+  outline: none;
+}
+
+.todo--submit {
+  background-color: aquamarine;
+  font-family: kalam;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.todo--display {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+li {
+  height: 4rem;
+  width: 100%;
+  font-size: 2.5rem;
+  font-family: "Indie Flower", cursive;
+  /* border: 1px solid black; */
+}
+
+li:last-of-type {
+  border-radius: 0 0 20px 20px;
+}
+
+li i {
+  font-size: 1.5rem;
+}
+
+i {
+  cursor: pointer;
+}
