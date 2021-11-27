@@ -1,18 +1,22 @@
 const showFormBtn = document.querySelector(".show-todo-form--btn");
 const todoInputForm = document.querySelector(".todo--form");
-const form = document.querySelector(".todo--form");
+// const form = document.querySelector(".todo--form");
+const formInputs = document.querySelectorAll(".todo--form input");
 const todoDisplay = document.querySelector(".todo--display");
 const todoHeading = document.querySelector(".todo--title");
 const todoContainer = document.querySelector(".todo--container");
 
+// Show Input Form Button
 showFormBtn.addEventListener("click", () => {
   todoInputForm.classList.toggle("show");
-  todoInputForm.style.maxHeight = "100%";
 });
 
-form.addEventListener("submit", (e) => {
+// Add New ToDo functionality
+todoInputForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(e.target.todoInput.value);
+  if (e.target.todoInput.value === "") {
+    return;
+  }
   const todoItem = `
   <div class="todo--item">
     <span class="item--content">${e.target.todoInput.value}</span> 
@@ -30,14 +34,19 @@ form.addEventListener("submit", (e) => {
 
 // Edit, Delete and Strike Through
 todoDisplay.addEventListener("click", (e) => {
-  if (e.target.classList[0] === "delete") {
+  const clickedItem = e.target.classList[0];
+  if (clickedItem === "delete") {
     e.target.parentNode.parentNode.remove();
   }
-  if (e.target.classList[0] === "edit") {
-    form.todoInput.value = e.target.parentNode.previousElementSibling.innerText;
+  if (clickedItem === "edit") {
+    todoInputForm.todoInput.value =
+      e.target.parentNode.previousElementSibling.innerText;
     e.target.parentNode.parentNode.remove();
+    if (![...todoInputForm.classList].includes("show")) {
+      todoInputForm.classList.add("show");
+    }
   }
-  if (e.target.classList[0] === "item--content") {
+  if (clickedItem === "item--content") {
     if (e.target.style.textDecoration === "") {
       e.target.style.textDecoration = "line-through";
     } else if (e.target.style.textDecoration === "line-through") {
@@ -46,6 +55,7 @@ todoDisplay.addEventListener("click", (e) => {
   }
 });
 
+// Dynamically changing border radius if there are no todo items
 function borderRadius() {
   if (todoDisplay.innerHTML === "") {
     todoHeading.style.borderRadius = "10px 10px 0 0";
