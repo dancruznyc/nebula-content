@@ -1,6 +1,5 @@
 const showFormBtn = document.querySelector(".show-todo-form--btn");
 const todoInputForm = document.querySelector(".todo--form");
-// const form = document.querySelector(".todo--form");
 const formInputs = document.querySelectorAll(".todo--form input");
 const todoDisplay = document.querySelector(".todo--display");
 const todoHeading = document.querySelector(".todo--title");
