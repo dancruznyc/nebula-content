@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Calculator Project</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -28,41 +28,70 @@
         </div>
       </div>
       <div class="controls">
-        <div class="mode"></div>
+        <div class="mode">
+          <div class="btn-row">
+            <div class="btn-mode btn-mode-active" data-mode="calculator">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="btn-mode" data-mode="mortgage">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="btn-mode" data-mode="retirement">
+              <i class="fas fa-chart-line"></i>
+            </div>
+          </div>
+        </div>
         <div class="control-btns--container">
           <div class="btn-row">
-            <div class="control-btns">C</div>
-            <div class="control-btns">&plusmn;</div>
-            <div class="control-btns" data-type="operator">%</div>
-            <div class="control-btns" data-type="operator">&divide;</div>
+            <div class="control-btns" data-type="clear">C</div>
+            <div class="control-btns" data-key="posNeg" data-type="special">
+              &plusmn;
+            </div>
+            <div class="control-btns" data-key="percent" data-type="special">
+              %
+            </div>
+            <div class="control-btns" data-key="divide" data-type="operator">
+              &divide;
+            </div>
           </div>
           <div class="btn-row">
-            <div class="control-btns">7</div>
-            <div class="control-btns">8</div>
-            <div class="control-btns">9</div>
-            <div class="control-btns" data-type="operator">x</div>
+            <div class="control-btns" data-type="number">7</div>
+            <div class="control-btns" data-type="number">8</div>
+            <div class="control-btns" data-type="number">9</div>
+            <div class="control-btns" data-key="times" data-type="operator">
+              x
+            </div>
           </div>
           <div class="btn-row">
-            <div class="control-btns">4</div>
-            <div class="control-btns">5</div>
-            <div class="control-btns">6</div>
-            <div class="control-btns" data-type="operator">-</div>
+            <div class="control-btns" data-type="number">4</div>
+            <div class="control-btns" data-type="number">5</div>
+            <div class="control-btns" data-type="number">6</div>
+            <div class="control-btns" data-key="minus" data-type="operator">
+              -
+            </div>
           </div>
           <div class="btn-row">
-            <div class="control-btns">1</div>
-            <div class="control-btns">2</div>
-            <div class="control-btns">3</div>
-            <div class="control-btns" data-type="operator">+</div>
+            <div class="control-btns" data-type="number">1</div>
+            <div class="control-btns" data-type="number">2</div>
+            <div class="control-btns" data-type="number">3</div>
+            <div class="control-btns" data-key="plus" data-type="operator">
+              +
+            </div>
           </div>
           <div class="btn-row">
-            <div class="control-btns">&larr;</div>
-            <div class="control-btns">0</div>
-            <div class="control-btns">.</div>
-            <div class="control-btns">=</div>
+            <div class="control-btns" data-type="special" data-key="backspace">
+              &larr;
+            </div>
+            <div class="control-btns" data-type="number">0</div>
+            <div class="control-btns" data-key="period" data-type="number">
+              .
+            </div>
+            <div class="control-btns" data-type="equals">=</div>
           </div>
         </div>
       </div>
     </div>
+    <script src="modes.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

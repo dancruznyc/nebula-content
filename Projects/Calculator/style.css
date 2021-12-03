@@ -52,28 +52,117 @@ body {
   align-items: center;
 }
 
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .displays {
   width: 40%;
   height: 85%;
   border-radius: 20px;
-  background-color: black;
+
+  background-image: linear-gradient(
+    to right bottom,
+    #212121,
+    #1b1b1b,
+    #141414,
+    #0c0c0c,
+    #000000
+  );
+}
+
+.mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-row {
   display: flex;
 }
 
+.btn-mode {
+  width: 8rem;
+  height: 6rem;
+  color: #a49fa1;
+  font-size: 3rem;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 6rem;
+  margin: 1rem;
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.67);
+  background-image: linear-gradient(
+    to right bottom,
+    #212121,
+    #1b1b1b,
+    #141414,
+    #0c0c0c,
+    #000000
+  );
+  cursor: pointer;
+}
+.btn-mode i {
+  pointer-events: none;
+}
+
+.btn-mode-active {
+  color: #ae3535;
+  box-shadow: inset -1px -1px 5px #5b5b5b, inset 1px 1px 5px #000;
+  cursor: auto;
+  transform: scale(0.99);
+}
+
+.btn-mode-active i {
+  background: -webkit-linear-gradient(#ae3535, #7a1919);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .control-btns {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   background-color: black;
   margin: 5px;
   border-radius: 10px;
   color: #a49fa1;
   text-align: center;
-  line-height: 4rem;
+  line-height: 5rem;
   font-size: 2.5rem;
   cursor: pointer;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(
+    to right bottom,
+    #212121,
+    #1b1b1b,
+    #141414,
+    #0c0c0c,
+    #000000
+  );
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.control-btns:hover {
+  color: white;
+  background-image: linear-gradient(
+    to right bottom,
+    #252525,
+    #1e1e1e,
+    #181818,
+    #111111,
+    #060606
+  );
+}
+
+.control-btns:active {
+  box-shadow: inset -1px -1px 4px #5b5b5b, inset 1px 1px 4px #000;
+
+  transform: scale(0.99);
 }
 
 /* Displays */
@@ -91,5 +180,8 @@ body {
 }
 
 .main-output {
+  text-align: right;
+  width: 100%;
   font-size: 3rem;
+  overflow-wrap: break-word;
 }
