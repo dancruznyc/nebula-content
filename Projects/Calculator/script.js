@@ -2,6 +2,7 @@ const smallOutput = document.querySelector(".small-output");
 const mainOutput = document.querySelector(".main-output");
 const calcBtns = document.querySelectorAll(".control-btns");
 const modeBtns = document.querySelectorAll(".btn-mode");
+const displays = document.querySelectorAll(".display");
 
 let prevKeyType;
 let integerA = 0;
@@ -78,7 +79,6 @@ function specialKeys(btnPressed) {
     currentNum = currentNum.slice(0, currentNum.length - 1);
     mainOutput.innerText = currentNum;
   } else if (btnPressed === "posNeg") {
-    //add remove neg
     if (currentNum.includes("-")) {
       currentNum = currentNum.substring(1);
       mainOutput.innerText = currentNum;
@@ -87,6 +87,7 @@ function specialKeys(btnPressed) {
       mainOutput.innerText = currentNum;
     }
   } else if (btnPressed === "percent") {
+    if (currentNum === "" || currentNum === "0") return;
     currentNum = `${parseInt(currentNum) / 100}`;
     mainOutput.innerText = currentNum;
   }

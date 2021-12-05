@@ -80,6 +80,22 @@ body {
   align-items: center;
 }
 
+.mode-control-title {
+  color: #a49fa1;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.mortgage-form--title {
+  width: 25rem;
+}
+
+.mortgage-output--title {
+  font-size: 2rem;
+  text-align: left;
+  width: 25rem;
+}
+
 .btn-row {
   display: flex;
 }
@@ -151,18 +167,28 @@ body {
   color: white;
   background-image: linear-gradient(
     to right bottom,
-    #252525,
-    #1e1e1e,
+    #2e2e2e,
+    #262626,
+    #1f1f1f,
     #181818,
-    #111111,
-    #060606
+    #101010
   );
 }
 
 .control-btns:active {
   box-shadow: inset -1px -1px 4px #5b5b5b, inset 1px 1px 4px #000;
-
   transform: scale(0.99);
+}
+
+.btn-mode:hover:not(.btn-mode-active) {
+  background-image: linear-gradient(
+    to right bottom,
+    #2e2e2e,
+    #262626,
+    #1f1f1f,
+    #181818,
+    #101010
+  );
 }
 
 /* Displays */
@@ -170,7 +196,7 @@ body {
 .basic--display {
   height: 100%;
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: end;
   justify-content: end;
@@ -179,9 +205,112 @@ body {
   padding: 2rem;
 }
 
+.retirement-display {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #a49fa1;
+}
+
+.mortgage-display {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #a49fa1;
+}
+
+.display-active {
+  display: flex;
+}
+
 .main-output {
   text-align: right;
   width: 100%;
   font-size: 3rem;
   overflow-wrap: break-word;
+}
+
+.mortgage-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.retirement-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .mortgage-form input {
+  height: 3rem;
+  margin: 2rem 0;
+}
+*/
+
+.mortgage-form select {
+  height: 4rem;
+  width: 250px;
+  margin: 2.2rem 0 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.custom-field {
+  position: relative;
+  font-size: 2rem;
+  /* border-top: 20px solid transparent; */
+  --field-padding: 12px;
+  margin: 2.2rem 0 0;
+}
+
+.custom-field input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: linear-gradient(
+    to right bottom,
+    #363636,
+    #2e2e2e,
+    #272727,
+    #1f1f1f,
+    #181818
+  );
+  padding: 1.2rem;
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
+  font-size: 2rem;
+  color: #aaa;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left: 1.2rem;
+  width: calc(100% - (1.2rem * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top: 22px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+.custom-field input:focus + .placeholder,
+.custom-field input:not(:placeholder-shown) + .placeholder {
+  top: -10px;
+  font-size: 1.5rem;
+  color: white;
 }

@@ -22,12 +22,79 @@
   <body>
     <div class="container">
       <div class="displays">
-        <div class="basic--display">
+        <div class="retirement-display display">
+          <h2>Retirement Calculator</h2>
+          <form action="" class="retirement-form">
+            <label class="custom-field">
+              <input type="number" placeholder=" " name="cage" />
+              <span class="placeholder">Age</span>
+            </label>
+            <label class="custom-field">
+              <input type="number" placeholder=" " name="rage" />
+              <span class="placeholder">Retirement Age</span>
+            </label>
+            <label class="custom-field">
+              <input type="number" placeholder=" " name="totalsavings" />
+              <span class="placeholder">Current Savings</span>
+            </label>
+            <label class="custom-field">
+              <input type="number" placeholder=" " name="monthlysavings" />
+              <span class="placeholder">Monthly Savings</span>
+            </label>
+            <label class="custom-field">
+              <input
+                type="number"
+                placeholder=" "
+                name="interest"
+                step="0.01"
+              />
+              <span class="placeholder">Interest</span>
+            </label>
+            <input type="submit" value="Calculate" />
+          </form>
+          <p class="mortgage-output--title">Retirement savings:</p>
+          <div class="retirement-output"></div>
+        </div>
+        <div class="mortgage-display display">
+          <form action="" class="mortgage-form">
+            <h2 class="mortgage-form--title">Mortgage Calculator</h2>
+            <label class="custom-field">
+              <input
+                type="number"
+                placeholder=" "
+                name="loan-amount"
+                required
+              />
+              <span class="placeholder">Loan Amount</span>
+            </label>
+            <label class="custom-field">
+              <input
+                type="number"
+                placeholder=" "
+                name="interest"
+                step="0.01"
+                required
+              />
+              <span class="placeholder">Interest Rate</span>
+            </label>
+            <select class="loan-type" name="loan-type" required>
+              <option value="30-Year-Fixed">30 Year Fixed</option>
+              <option value="20-Year-Fixed">20 Year Fixed</option>
+              <option value="15-Year-Fixed">15 Year Fixed</option>
+              <option value="10-1-Arm">10 / 1 Arm</option>
+            </select>
+            <input type="submit" value="Calculate" />
+          </form>
+          <p class="mortgage-output--title">Monthly Payment:</p>
+          <div class="mortgage-output"></div>
+        </div>
+        <div class="basic--display display display-active">
           <div class="small-output"></div>
           <div class="main-output">0</div>
         </div>
       </div>
       <div class="controls">
+        <h2 class="mode-control-title">Choose calculator mode</h2>
         <div class="mode">
           <div class="btn-row">
             <div class="btn-mode btn-mode-active" data-mode="calculator">
