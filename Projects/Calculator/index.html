@@ -23,16 +23,18 @@
     <div class="container">
       <div class="displays">
         <div class="retirement-display display">
-          <h2>Retirement Calculator</h2>
+          <h2 class="retirement--title">Retirement Calculator</h2>
           <form action="" class="retirement-form">
-            <label class="custom-field">
-              <input type="number" placeholder=" " name="cage" />
-              <span class="placeholder">Age</span>
-            </label>
-            <label class="custom-field">
-              <input type="number" placeholder=" " name="rage" />
-              <span class="placeholder">Retirement Age</span>
-            </label>
+            <div class="age-container">
+              <label class="custom-field current-age">
+                <input type="number" placeholder=" " name="cage" />
+                <span class="placeholder">Age</span>
+              </label>
+              <label class="custom-field retirement-age">
+                <input type="number" placeholder=" " name="rage" />
+                <span class="placeholder">Retirement Age</span>
+              </label>
+            </div>
             <label class="custom-field">
               <input type="number" placeholder=" " name="totalsavings" />
               <span class="placeholder">Current Savings</span>
@@ -50,7 +52,7 @@
               />
               <span class="placeholder">Interest</span>
             </label>
-            <input type="submit" value="Calculate" />
+            <input type="submit" value="Calculate" class="retirement-submit" />
           </form>
           <p class="mortgage-output--title">Retirement savings:</p>
           <div class="retirement-output"></div>
@@ -77,13 +79,18 @@
               />
               <span class="placeholder">Interest Rate</span>
             </label>
-            <select class="loan-type" name="loan-type" required>
-              <option value="30-Year-Fixed">30 Year Fixed</option>
-              <option value="20-Year-Fixed">20 Year Fixed</option>
-              <option value="15-Year-Fixed">15 Year Fixed</option>
-              <option value="10-1-Arm">10 / 1 Arm</option>
-            </select>
-            <input type="submit" value="Calculate" />
+            <div class="custom-select">
+              <select class="loan-type" name="loan-type" required>
+                <option value="30-Year-Fixed">30 Year Fixed</option>
+                <option value="20-Year-Fixed">20 Year Fixed</option>
+                <option value="15-Year-Fixed">15 Year Fixed</option>
+                <option value="10-1-Arm">10 / 1 Arm</option>
+              </select>
+              <span class="custom-arrow">
+                <i class="fas fa-angle-down"></i>
+              </span>
+            </div>
+            <input type="submit" value="Calculate" class="mortgage-submit" />
           </form>
           <p class="mortgage-output--title">Monthly Payment:</p>
           <div class="mortgage-output"></div>

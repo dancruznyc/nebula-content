@@ -82,10 +82,22 @@ function calcRetirement(e) {
     (monthlySavings * Math.pow(1 + expectedInterest / 12, 12 * yearsOfSaving) -
       1) /
     (expectedInterest / 12);
-
+  // const check =
+  //   monthlySavings * powerOf(1 + expectedInterest / 12, 12 * yearsOfSaving) -
+  //   1 / (expectedInterest / 12);
+  // console.log(check.toFixed(2));
+  // console.log(contributions.toFixed(2));
   const totalSavings =
     parseFloat(startingPrinciple.toFixed(2)) +
     parseFloat(contributions.toFixed(2));
 
   retirementOutput.innerText = `${totalSavings}`;
 }
+
+// function powerOf(base, exponent) {
+//   let power = 1;
+//   for (let i = 0; i < exponent; i++) {
+//     power = power * base;
+//   }
+//   return power;
+// }

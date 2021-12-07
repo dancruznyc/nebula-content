@@ -32,8 +32,8 @@ body {
 }
 
 .container {
-  width: 70vw;
-  height: 60vh;
+  width: 90rem;
+  height: 60rem;
   background-image: linear-gradient(
     to left top,
     #212020,
@@ -44,9 +44,10 @@ body {
   );
   border-radius: 20px;
 
-  box-shadow: 13px 15px 22px 7px rgba(0, 0, 0, 0.67);
-  -webkit-box-shadow: 13px 15px 22px 7px rgba(0, 0, 0, 0.67);
-  -moz-box-shadow: 13px 15px 22px 7px rgba(0, 0, 0, 0.67);
+  box-shadow: 13px 15px 22px 7px rgba(0, 0, 0, 0.67), inset 2px 2px 8px #5b5b5b,
+    inset -2px -2px 8px #000;
+  /* -webkit-box-shadow: 13px 15px 22px 7px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 13px 15px 22px 7px rgba(0, 0, 0, 0.67); */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -72,6 +73,7 @@ body {
     #0c0c0c,
     #000000
   );
+  box-shadow: inset -1px -1px 4px #5b5b5b, inset 1px 1px 4px #000;
 }
 
 .mode {
@@ -254,11 +256,72 @@ body {
 */
 
 .mortgage-form select {
-  height: 4rem;
   width: 250px;
   margin: 2.2rem 0 0;
+  font-size: 2rem;
+  color: #aaa;
+  background-image: linear-gradient(
+    to right bottom,
+    #363636,
+    #2e2e2e,
+    #272727,
+    #1f1f1f,
+    #181818
+  );
+  outline: none;
+  border: 0;
+  border-radius: 3px;
+  padding: 1.2rem;
 }
 
+.custom-select {
+  position: relative;
+}
+
+.custom-arrow {
+  display: flex;
+  position: absolute;
+  top: 2.2rem;
+  right: 0;
+  background-color: #1c1c1c;
+  height: calc(100% - 2.2rem);
+  width: 4rem;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  font-size: 2.5rem;
+  border-radius: 0 3px 3px 0;
+}
+
+.custom-arrow i {
+  background: -webkit-linear-gradient(#ae3535, #7a1919);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mortgage-submit,
+.retirement-submit {
+  margin: 2.2rem 0;
+  width: 25rem;
+  height: 4rem;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right bottom,
+    #9e2626,
+    #902020,
+    #821a1a,
+    #741414,
+    #670e0e
+  );
+  font-size: 2rem;
+  color: #aaa;
+}
+
+/* Remove arrows for number input fields */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -267,8 +330,6 @@ input::-webkit-inner-spin-button {
 .custom-field {
   position: relative;
   font-size: 2rem;
-  /* border-top: 20px solid transparent; */
-  --field-padding: 12px;
   margin: 2.2rem 0 0;
 }
 
@@ -297,10 +358,6 @@ input::-webkit-inner-spin-button {
 .custom-field .placeholder {
   position: absolute;
   left: 1.2rem;
-  width: calc(100% - (1.2rem * 2));
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   top: 22px;
   line-height: 100%;
   transform: translateY(-50%);
@@ -310,7 +367,35 @@ input::-webkit-inner-spin-button {
 
 .custom-field input:focus + .placeholder,
 .custom-field input:not(:placeholder-shown) + .placeholder {
-  top: -10px;
+  top: -12px;
   font-size: 1.5rem;
   color: white;
+}
+
+.age-container {
+  display: flex;
+}
+
+.current-age input {
+  width: 6rem;
+  margin-right: 0.7rem;
+}
+
+.retirement-age input {
+  width: 20rem;
+}
+
+.mortgage-form--title,
+.retirement--title {
+  font-size: 2rem;
+}
+
+.retirement--title {
+  margin-top: 2.2rem;
+}
+
+.retirement-output,
+.mortgage-output {
+  margin-top: 1rem;
+  font-size: 2rem;
 }
