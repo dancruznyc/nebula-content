@@ -27,20 +27,30 @@
           <form action="" class="retirement-form">
             <div class="age-container">
               <label class="custom-field current-age">
-                <input type="number" placeholder=" " name="cage" />
+                <input type="number" placeholder=" " name="cage" required />
                 <span class="placeholder">Age</span>
               </label>
               <label class="custom-field retirement-age">
-                <input type="number" placeholder=" " name="rage" />
+                <input type="number" placeholder=" " name="rage" required />
                 <span class="placeholder">Retirement Age</span>
               </label>
             </div>
             <label class="custom-field">
-              <input type="number" placeholder=" " name="totalsavings" />
+              <input
+                type="number"
+                placeholder=" "
+                name="totalsavings"
+                required
+              />
               <span class="placeholder">Current Savings</span>
             </label>
             <label class="custom-field">
-              <input type="number" placeholder=" " name="monthlysavings" />
+              <input
+                type="number"
+                placeholder=" "
+                name="monthlysavings"
+                required
+              />
               <span class="placeholder">Monthly Savings</span>
             </label>
             <label class="custom-field">
@@ -49,6 +59,7 @@
                 placeholder=" "
                 name="interest"
                 step="0.01"
+                required
               />
               <span class="placeholder">Interest</span>
             </label>
