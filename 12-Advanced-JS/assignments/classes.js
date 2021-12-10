@@ -96,12 +96,12 @@ const pepperSteak = new Meal(
   "italian"
 );
 
-console.log(daniel);
-console.log(knife);
-console.log(fryingPan);
-console.log(pepperSteak);
-pepperSteak.displayIngredients();
-console.log(daniel.chopIngredients(pepperSteak, fryingPan));
-console.log(daniel.chopIngredients(pepperSteak, knife));
+// console.log(daniel);
+// console.log(knife);
+// console.log(fryingPan);
+// console.log(pepperSteak);
+// pepperSteak.displayIngredients();
+// console.log(daniel.chopIngredients(pepperSteak, fryingPan));
+// console.log(daniel.chopIngredients(pepperSteak, knife));
 console.log(daniel.cookFood(pepperSteak, fryingPan));
 // console.log(pepperSteak);
