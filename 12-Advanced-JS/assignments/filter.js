@@ -49,7 +49,7 @@ function removeLetters(str) {
     (char) => char.toLowerCase() === char.toUpperCase()
   );
   console.log(noLetters.join(""));
-  return noLetters;
+  return noLetters.join("");
 }
 
 removeLetters(mixedString);
