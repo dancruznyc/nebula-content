@@ -33,3 +33,7 @@ function removeOddNums(num) {
 }
 
 console.log(removeOddNums(567893456));
+
+const nums = [2, 4, 5, 65, 6, 4, 4];
+
+nums.reduce;
